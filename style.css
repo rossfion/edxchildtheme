@@ -1,0 +1,239 @@
+/*
+ Theme Name:   EdxChildTheme
+ Theme URI:    https://github.com/rossfion/edxchildtheme/
+ Description:  Twenty Twenty Child Theme built for Eduonix Modern WordPress Theme Development Course, courtesy of Aaron Snowberger.
+ Author:       Fionn Ross
+ Author URI:   https://fionnrossonline.com
+ Template:     twentytwenty
+ Version:      20201017-1.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags: blog, one-column, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready
+ Text Domain:  edxchildtheme
+*/
+
+/* Font Families ----------------------------- */
+.entry-content p,
+.entry-content ol,
+.entry-content ul,
+.entry-content dl,
+.entry-content dt,
+.widget_text p,
+.widget_text ol,
+.widget_text ul,
+.widget_text dl,
+.widget_text dt,
+.widget-content .rssSummary {
+    font-family: "Lora", "Libre Baskerville", NonBreakingSpaceOverride, "Hoefler Text", Garamond, "Times New Roman", serif;
+    letter-spacing: normal;
+}
+
+/* Pull Blockquotes ----------------------------- */
+.wp-block-pullquote::before,
+.wp-block-pullquote.is-style-solid-color::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f10e";
+    font-weight: 900;
+    font-size: 2rem;
+    padding: 10px;
+}
+
+/* Fixed Header ----------------------------- */
+body {
+    margin-top: 146px; /* JS handles the actual number, but this is the height of the normal, full screen menu */
+}
+
+#site-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 4px 8px 16px rgba(0,0,0,0.14);
+    transition: all 0.5s;
+    z-index: 10;
+}
+
+/* Search Toggle ----------------------------- */
+.toggle-wrapper.search-toggle-wrapper {
+    position: fixed;
+    top: 15rem;
+    background: #cd2653;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    /*margin-right: 4rem;*/
+    box-shadow: 2px 4px 8px rgba(0,0,0,0.32);
+}
+
+.toggle-wrapper.search-toggle-wrapper::before {
+    display: none;
+}
+
+.toggle.search-toggle {
+    padding: 0px 19px;
+    color: white;
+    height: 40px;
+}
+
+.toggle.search-toggle:active,
+.toggle.search-toggle:focus {
+    outline: none;
+}
+
+.toggle.search-toggle svg {
+    color: white;
+}
+
+.toggle.search-toggle .toggle-inner .toggle-text {
+    color: white;
+    top: 35px;
+}
+
+/* Post / Category Title Icon (filter) ----------------------------- */
+.post-title-icon {
+    opacity: 0.5;
+    font-size: 50%;
+    position: relative;
+    top: -10px;
+    left: -10px;
+}
+
+.archive-title .post-title-icon,
+li .post-title-icon,
+.title-inner .post-title-icon {
+    top: -5px;
+    left: 0;
+}
+
+/* Author Page ----------------------------- */
+.archive-header-inner .author-bio {
+    margin-top: 0;
+    padding: 0;
+}
+
+.archive-header-inner .author-bio .avatar {
+    width: 320px;
+    height: 320px;
+    position: static;
+    margin: 0 auto 3rem;
+}
+
+.author-archive-posts {
+    margin: 8rem auto;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, calc( 50% - 2.5rem ) );
+    grid-gap: 5rem;
+}
+
+.author-archive-posts hr {
+    grid-column: span 2;
+}
+
+.author-archive-posts .entry-title {
+    font-size: 3.4rem;
+}
+
+.author-archive-posts > li {
+    margin: 0;
+}
+
+.author-archive-posts .section-inner {
+    position: relative;
+}
+
+.author-archive-posts .post-edit {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.author-archive-posts .featured-media img {
+    max-width: 320px;
+}
+
+/* Footer & Widgets ----------------------------- */
+.menu-middle {
+    margin-top: 5rem;
+}
+
+.footer-widgets-wrapper {
+    display: block;
+    width: 100%;
+    margin: 0;
+}
+
+.footer-widgets.column-one.grid-item {
+    width: 100%;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, calc( 33% - 3rem) );
+    grid-gap: 5rem;
+}
+
+.footer-widgets.column-two.grid-item {
+    width: 100%;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(5, calc( 20% - 4rem) );
+    grid-gap: 5rem;
+    margin-top: 5rem;
+    padding-top: 5rem;
+    border-top: 2px solid #cd2653;
+}
+
+.footer-widgets.column-one .widget,
+.footer-widgets.column-two .widget {
+    margin-top: 0;
+}
+
+.footer-colophon-menu {
+    border-top: 1px solid #dcd7ca;
+    margin-top: 4.3rem;
+    padding-top: 2rem;
+}
+
+.footer-colophon-menu .footer-menu-wrapper {
+    margin: 0 auto;
+}
+
+.colophon-menu {
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.footer-colophon-menu a {
+    color: #6d6d6d;
+}
+
+.footer-colophon-menu li:first-child {
+    list-style-type: none;
+    margin-left: 0;
+}
+
+#site-footer {
+    padding-bottom: 2rem;
+}
+
+/* Error 404 Widgets ----------------------------- */
+.error404-widgets {
+    display: grid;
+    grid-template-columns: repeat(4, calc( 25% - 3.75rem ) );
+    grid-gap: 5rem;
+    margin-top: 5rem;
+    padding-top: 5rem;
+    border-top: 1px solid #dcd7ca;
+}
+
+.error404-widgets .widget,
+.error404-widgets .widgettitle {
+    margin-top: 0;
+}
+
+.error404-widgets .widgettitle {
+    font-size: 4rem;
+}
+
+.error404-media {
+    max-width: 40rem;
+    margin: 0 auto;
+}
